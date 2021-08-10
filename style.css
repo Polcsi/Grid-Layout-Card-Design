@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: block;
+}
+
+body {
+    overflow: auto;
+    overscroll-behavior: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    margin: 2% 0 3% 0;
+    margin-left: 10%;
+    padding-bottom: 3%;
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fill, minmax(400px, 450px));
+    width: 80%;
+    grid-gap: 20px;
+    justify-content: center;
+    overflow: none;
+}
+
+.article {
+    display: grid;
+    grid-template-areas: 
+    'cover cover'
+    'category category'
+    'title title'
+    'sample sample'
+    'btn date';
+    align-items: center;
+    grid-gap: 10px;
+    padding: 10px;
+    will-change: background-color;
+    transition: background-color ease-in-out 200ms;
+}
+
+.article:hover {
+    background-color: #f2f2f2;
+}
+
+.article > .cover {
+    grid-area: cover;
+}
+
+.article > .category {
+    grid-area: category;
+}
+
+.article > .title {
+    grid-area: title;
+}
+
+.article > .sample {
+    grid-area: sample;
+}
+
+.article > .read-article-btn {
+    grid-area: btn;
+}
+
+.article > .date {
+    grid-area: date;
+}
+
+.cover img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.category span {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    padding-left: 2%;
+}
+
+.title span {
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding: 0;
+}
+
+.sample p {
+    padding: 3% 4% 0 4%;
+    font-size: 1.1rem;
+    color: #979797;
+    margin-bottom: 8%;
+    text-align: justify;
+}
+
+.date span {
+    text-align: center;
+    color: #979797;
+    padding-left: 13%;
+}
+
+.read-article-btn a {
+    position: relative;
+    z-index: 0;
+    border: none;
+    color: black;
+    background: #35D5A4;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 3px solid #35D5A4;
+    padding: 7px 32px 7px 32px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: all ease-in-out 200ms;
+    will-change: auto;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+
+.read-article-btn a:hover {
+    background: none;
+    transform: translateY(-5px);
+}
